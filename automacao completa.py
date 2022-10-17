@@ -29,7 +29,7 @@ for linha in arquivo_consulta:
     eu.click(1364,738,duration=1)
     eu.click(1217,664,duration=1)
     #salvar a print na pasta
-    eu.click(738,120,duration=3)
+    eu.click(738,120,duration=2)
     eu.click(430,446,duration=2)
     eu.hotkey('ctrl','a')
     eu.write(razao)
@@ -68,7 +68,7 @@ for linha in arquivo_consulta:
     else:
         continue
     #abrir a fatura 
-    if eu.locateAllOnScreen('print de conferencia 2.png'):
+    if eu.locateOnScreen('print de conferencia 2.png'):
         eu.click('print de conferencia 2.png',duration=0.5)
         eu.click(549,490,duration=1)
         eu.click(649,391,duration=1)
@@ -84,5 +84,6 @@ for linha in arquivo_consulta:
         eu.click(1023,43,duration=1)
         eu.click(324,196,duration=0.5)
     else:
+        eu.click(324,196,duration=0.5)
         continue
     
